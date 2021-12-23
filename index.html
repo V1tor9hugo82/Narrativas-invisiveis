@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <header>
+
+    <div class="bg-video">
+      <video playsinline="playsinline" autoplay muted loop="loop">
+        <source src="king-kong.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Recursos</a></li>
+        <li><a href="">Projetos</a></li>
+        <li><a href=""></a>Experiencia</li>
+        <li class="logo">
+          <a href="">
+            <!--
+            <img src="images/logo-white.png" class="white" alt="">
+            <img src="images/logo-white.png" class="black" alt="">
+           -->
+          </a>
+        </li>
+        <li><a href=""></a>Valores</li>
+        <li><a href=""></a>Nossos Clientes</li>
+        <li><a href=""></a>Blog</li>
+        <li><a href=""></a>Contato</li>
+      </ul>
+
+      <a href="javascript:void(0);" class="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+    </nav>
+  </header>
+
+  <div class="full-nav">
+    <!--
+      <div class="logo"><a href=""><img src="images/logo2.png" alt=""></a></div>
+    -->
+    <nav class="nav2">
+      <ul>
+        <li><a href=""><span>01.</span>Home</a></li>
+        <li><a href=""><span>02.</span>Recursos</a></li>
+        <li><a href=""><span>03.</span>Equipe</a></li>
+        <li><a href=""><span>04.</span>Trabalhos</a></li>
+        <li><a href=""><span>05.</span>Valores</a></li>
+        <li><a href=""><span>06.</span>clientes</a></li>
+        <li><a href=""><span>07.</span>blog</a></li>
+        <li><a href=""><span>08.</span>Contato</a></li>
+
+      </ul>
+    </nav>
+    <div class="corner-circle">
+      <a href="javascript:void(0);" class="nav-close"><span></span><span></span></a>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+  <script>
+
+    $(document).ready(function () {
+      $(".nav-icon").click(function () {
+        $(".full-nav").addClass("open");
+      });
+      $(".nav-class").click(function () {
+        $(".full-nav").removeClass("open");
+      });
+
+      $(Window).scroll(function () {
+        var sc = $(window).scrollTop();
+        if (sc > 100) {
+          $(".nav").addClass("sticky");
+        } else {
+          $(".nav").removeClass("sticky");
+        }
+      });
+
+    });
+
+  </script>
+
+
+</body>
+
+</html>
